@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <ul>
+    <% messages.forEach((message, index) => { %>
+        <%- include('message', {message: message, link: `/messages/${index}`}); %>
+    <% }); %>
+    </ul>
+
+    <a href="/new">Create a new message</a>
+  </body>
+</html>
